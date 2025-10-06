@@ -19,8 +19,7 @@ struct Info {
     u_time: String,
 }
 
-
-async fn get_show_info(db: &deadpool_postgres::Pool) -> Vec<Info> {
+async fn get_info(db: &deadpool_postgres::Pool) -> Vec<Info> {
     let ct = db.get().await.unwrap();
     let items = ct.query(r#"select "id", content, title, shortid, "createdAt", "updatedAt" from "Notes" order by "updatedAt" DESC"#, &[]).await.unwrap();
     let mut data:Vec<Info> = vec![];
@@ -52,7 +51,7 @@ async fn get_show_info(db: &deadpool_postgres::Pool) -> Vec<Info> {
 
 #[get("/codimd_display")]
 async fn get_display_html (db: web::Data<deadpool_postgres::Pool>, tmpl: web::Data<tera::Tera>) -> Result<HttpResponse, actix_web::Error>{
-    let data = get_show_info(&db).await;
+    let data = get_info(&db).await;
     let mut ctx = tera::Context::new();
     ctx.insert("data",&data);
     let view = tmpl.render("display.html", &ctx)
