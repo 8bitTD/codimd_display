@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html background=>
+    <head>
+        <meta charset="utf-8"/>       
+        <title>CodiMD 全体表示</title>
+        <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+        <link ref="icon" href="images/favicon.png" type="image/png">
+    </head>
+    <body>
+        <style type="text/css">
+            table{
+                border-collapse: collapse;
+                border-spacing: 0px;
+                width: 35%;
+                text-align: right;
+            }
+            table tr:nth-child(odd){background-color:white;}
+            table tr:nth-child(even){background-color:#f0f0f0;}
+            input.header {
+                width: 100%;
+                background-color:white;
+                cursor:pointer;
+                border-radius: 5px;
+            }
+            body{
+                
+            }
+        </style>
+        <table align="center">
+            {% for d in data %}
+                <fieldset>
+                    <legend><a href="{{d.url}}" target="_blank" style="line-height:0;">{{ d.url }} </a></legend> 
+                    <small>
+                        <p style="line-height:0; display:inline-block; color: #999999;">タイトル:</p>
+                        <p style="text-align: left; line-height:0; display: inline-block;">{{ d.title }}</p>
+                        <p style="line-height:0; display:inline-block; color: #999999;">作成日時:</p>
+                        <p style="text-align: left; line-height:0; display: inline-block;">{{ d.c_time }}</p>
+                        <p style="line-height:0; display:inline-block; color: #999999;">更新日時:</p>
+                        <p style="text-align: left; line-height:0; display: inline-block;">{{ d.u_time }}</p>
+                    </small>
+                    <hr size="1" noshade="" color="#c0c0c0" style="line-height:0;">
+                    {% for c in d.contents %}
+                        <p>{{ c }}</p>
+                    {% endfor %}
+                </fieldset> 
+            {% endfor %}
+        </table>
+        <script>
+            function page(){
+                document.location.reload();
+            }
+            function name_sort(){
+                document.cookie = "sort=name";
+                page();
+            }
+            function revision_sort(){
+                document.cookie = "sort=revision";
+                page();
+            }
+        </script>
+    </body>
+</html>
