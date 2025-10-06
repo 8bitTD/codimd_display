@@ -6,7 +6,7 @@ use rustc_serialize::hex::FromHex;
 const ADDRESS: &str = "192.168.11.5:8000"; //CodimMDの全体表示URL(IPアドレスとポート番号は適当です)
 const OWNER: &str = "hackmd"; //CodiMDのDBのOWNER名
 const DBNAME: &str = "hackmd"; //CodiMDのDB名
-const DBPASSWORD: &str = "hackmdpass"; CodiMDのDBのパスワード
+const DBPASSWORD: &str = "hackmdpass"; //CodiMDのDBのパスワード
 const CODIMDADDRESS: &str = "http://hack:3000/"; //CodiMDのURL
 
 #[derive(Debug, Serialize, Deserialize)]
