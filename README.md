@@ -1,7 +1,7 @@
 ## 概要
 
 このリポジトリは、CodiMDの全文表示サイトを作成するためのソースコードです
-<img width="1697" height="925" alt="image" src="https://github.com/user-attachments/assets/cb52679e-9fba-4afa-ba10-702d157ce494" />
+<img width="929" height="385" alt="image" src="https://github.com/user-attachments/assets/e70c9b44-a85f-4668-8664-f5237b4f10c2" />
 
 ## 使い方
 [Rust](https://rust-lang.org/ja/tools/install/)をインストール後に
