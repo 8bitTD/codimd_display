@@ -10,3 +10,7 @@ git clone https://github.com/8bitTD/codimd_display
 cd codimd_display
 cargo run --release
 ```
+
+## 補足
+main.rsの6行目~10行目を自分の環境に合うように書き換えてください
+
