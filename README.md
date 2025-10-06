@@ -1,6 +1,6 @@
 ## 概要
 
-このリポジトリは、CodiMDの全文表示サイトを作成するためのソースコードです
+このリポジトリは、CodiMDの全文表示サイトを作成するものです
 <img width="929" height="385" alt="image" src="https://github.com/user-attachments/assets/e70c9b44-a85f-4668-8664-f5237b4f10c2" />
 
 ## 使い方
