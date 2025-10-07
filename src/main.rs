@@ -70,7 +70,7 @@ async fn get_json_info(db: &deadpool_postgres::Pool) -> Vec<JsonInfo> {
         p_url.pop().unwrap();
         p_url.pop().unwrap();
         p_url = p_url.replace("/","_");
-        let url = format!("{}{}", ADDRESS, &p_url);
+        let url = format!("{}{}", CODIMDADDRESS, &p_url);
         let shortid = item.get("shortid");
         let content: String = item.get("content");
 
