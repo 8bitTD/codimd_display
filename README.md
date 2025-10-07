@@ -12,5 +12,5 @@ cargo run --release
 ```
 ウェブブラウザで `http://ユーザー名:ポート番号/codimd_display` にアクセスする
 ## 補足
-[src/main.rsの6行目~10行目](https://github.com/8bitTD/codimd_display/blob/d7c88d9e54e18a09d8c0dfe349dc468d7530e8ce/src/main.rs#L6-L10)を自分の環境に合うように書き換えてください
+[src/main.rsの6行目~10行目](https://github.com/8bitTD/codimd_display/blob/a7ebaccc593c4a453055e30bd744193ad9f19f21/src/main.rs#L6-L10)を自分の環境に合うように書き換えてください
 
